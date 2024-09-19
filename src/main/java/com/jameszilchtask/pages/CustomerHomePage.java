@@ -16,7 +16,7 @@ public class CustomerHomePage extends BasePage {
         super(driver);
     }
 
-    public void clickSignIn() {
+    public void clickSignInButton() {
         signInButton.click();
     }
 }
