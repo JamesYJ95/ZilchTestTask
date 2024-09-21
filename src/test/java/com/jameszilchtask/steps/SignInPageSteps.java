@@ -20,7 +20,7 @@ public class SignInPageSteps {
     @Given("I am on the Sign In page")
     public void iAmOnTheSignInPage() {signInPage.waitForSignInPageToLoad();}
 
-    @And("I click on 'Forgot your password?'")
+    @And("I click on 'Forgot your password?' link")
     public void iClickOnForgotYourPassword() {signInPage.clickForgotPasswordLink();}
 
 }

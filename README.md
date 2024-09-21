@@ -4,9 +4,7 @@ For my task, I have created a test automation framework in Java utilising Seleni
 Using Cucumber allows for greater test clarity, reusable test steps and easy reporting & CI/CD integration, while also supporting parameterization.
 The page object model was used to reduce code duplication and make the framework easier to maintain.
 
-IntelliJ IDE was used too
-
-Note: As this is using the production site, we run into some captcha issues.
+Note: As this is using the production site, we may run into captcha issues
 ## TO DO
  - Write more tests, this is obviously far from a complete set of comprehensive front-end tests.
  - Implement a mock web service to allow for stubbed API requests, which can allow for better edge case coverage, and removes the dependency on live APIs.

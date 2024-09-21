@@ -17,6 +17,9 @@ public class PasswordResetPageSteps {
     @And("I enter an invalid email address \"([^\"]*)\"$")
     public void iEnterAnInvalidEmailAddress(String email) {passwordResetPage.enterEmail(email);}
 
+    @And("I enter a valid email address \"([^\"]*)\"$")
+    public void iEnterAValidEmailAddress(String email) {passwordResetPage.enterEmail(email);}
+
     @And("I click on Send Link")
     public void iClickOnSendLink() {passwordResetPage.clickForgotPasswordButton();}
 
