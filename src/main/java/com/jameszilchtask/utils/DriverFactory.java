@@ -1,16 +1,19 @@
 package com.jameszilchtask.utils;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 
 public class DriverFactory {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            System.setProperty("webdriver.chrome.driver","C:\\Users\\JYJ\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--incognito");
+            driver = new ChromeDriver(options);
         }
         return driver;
     }

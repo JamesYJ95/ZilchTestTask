@@ -12,11 +12,10 @@ public class CustomerHomePage extends BasePage {
     @FindBy(partialLinkText = "Sign in")
     private WebElement signInButton;
 
-    public CustomerHomePage(WebDriver driver) {
-        super(driver);
-    }
+    public CustomerHomePage(WebDriver driver) {super(driver);}
 
-    public void clickSignInButton() {
-        signInButton.click();
-    }
+    public void clickSignInButton() {signInButton.click();}
+
+    public void waitForCustomerHomePageToLoad(){waitForPageToLoad(customerToggle, 5);}
+
 }
