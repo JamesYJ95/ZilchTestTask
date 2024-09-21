@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 
 public class SignInPageSteps {
     private SignInPage signInPage = new SignInPage(DriverFactory.getDriver());
@@ -19,18 +20,7 @@ public class SignInPageSteps {
     @Given("I am on the Sign In page")
     public void iAmOnTheSignInPage() {signInPage.waitForSignInPageToLoad();}
 
-    @And("I enter an invalid email address \"([^\"]*)\"$")
-    public void iEnterAnInvalidEmailAddress(String email){signInPage.enterEmail(email);}
-
-    @And("I enter a password \"([^\"]*)\"$")
-    public void iEnterAPassword(String password){signInPage.enterPassword(password);}
-    @And("I click log in")
-    public void iClickThePageHeader(){signInPage.clickLoginButton();}
-
-    @Then("I see the error message \"([^\"]*)\"$")
-    public void iSeeTheErrorMessage(String errorMessage){
-        signInPage.waitForEmailFieldErrorMessage();
-        Assert.assertEquals(errorMessage, signInPage.getEmailValidationErrorMessage());
-    }
+    @And("I click on 'Forgot your password?'")
+    public void iClickOnForgotYourPassword() {signInPage.clickForgotPasswordLink();}
 
 }

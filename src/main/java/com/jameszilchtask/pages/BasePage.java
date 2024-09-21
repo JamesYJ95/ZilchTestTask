@@ -29,4 +29,13 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+
+    public void waitFor5Seconds() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    }
+
+    public void enterEmail(WebElement element, String email){
+        element.clear();
+        element.sendKeys(email);
+    }
 }
